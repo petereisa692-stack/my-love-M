@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حكاية بيتر وحموكشتي ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
+</head>
+<body>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+
+    <!-- Navigation Dots -->
+    <nav class="nav-dots" aria-label="أقسام الموقع"></nav>
+
+    <!-- Floating Music Button (Always visible) -->
+    <button class="floating-music-btn" id="floating-music-toggle" onclick="toggleMusic()" title="تشغيل / إيقاف الأغنية">
+        🎵
+    </button>
+
+    <!-- Floating Hearts Background -->
+    <div class="floating-hearts"></div>
+
+    <!-- ===== 1. Welcome Screen ===== -->
+    <section id="welcome" class="section active fade-in">
+        <div class="welcome-content">
+            <div class="welcome-emoji">💕</div>
+            <h1 class="welcome-name">حموكشتي ❤️</h1>
+            <p class="welcome-question">عندي ليكي سؤال صغير...</p>
+            <p class="welcome-sub-question">فاكرة حكايتنا بدأت إزاي؟</p>
+            <button class="btn-romantic" onclick="startJourney()">
+                يلا نفتكر سوا 💗
+            </button>
+        </div>
+    </section>
+
+    <!-- ===== 2. Story Beginning ===== -->
+    <section id="story-beginning" class="section">
+        <div class="story-container">
+            <h2 class="section-title">بداية حكايتنا وأجمل صدفة ❤️</h2>
+            <p class="section-subtitle">يوم ما نورتي حياتي وبدأ كل شيء جميل</p>
+
+            <div class="story-image-wrapper">
+                <img src="images/photo1.jpg" alt="بيتر وحموكشتي">
+            </div>
+
+            <!-- عداد الحب -->
+            <div class="love-counter">
+                <p class="counter-title">عايشين أجمل حكاية مع بعض 💕</p>
+                <div class="counter-numbers">
+                    <div class="counter-unit">
+                        <span class="counter-value" id="counter-years">0</span>
+                        <span class="counter-label">سنة</span>
+                    </div>
+                    <div class="counter-unit">
+                        <span class="counter-value" id="counter-months">0</span>
+                        <span class="counter-label">شهر</span>
+                    </div>
+                    <div class="counter-unit">
+                        <span class="counter-value" id="counter-days">0</span>
+                        <span class="counter-label">يوم</span>
+                    </div>
+                    <div class="counter-unit">
+                        <span class="counter-value" id="counter-hours">0</span>
+                        <span class="counter-label">ساعة</span>
+                    </div>
+                    <div class="counter-unit">
+                        <span class="counter-value" id="counter-minutes">0</span>
+                        <span class="counter-label">دقيقة</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-text">
+                من أول يوم دخلتي فيه حياتي وكل حاجة اتغيرت وبقت أحلى بكتير.. وجودك جنبي هو السند والأمان والضحكة الصافية اللي من القلب، وكل ثانية بتعدي وإنتي معايا بتسوى الدنيا كلها.
+            </div>
+
+            <button class="btn-next" onclick="nextSection()">
+                يلا نشوف ذكرياتنا 📸
+            </button>
+        </div>
+    </section>
+
+    <!-- ===== 3. Photo Gallery ===== -->
+    <section id="gallery" class="section">
+        <div class="gallery-container">
+            <h2 class="section-title">ذكرياتنا الحلوة 📸</h2>
+            <p class="section-subtitle">صور من أحلى أوقاتنا سوا</p>
+
+            <div class="gallery-grid">
+                <!-- يتم بناء المعرض تلقائياً من JavaScript -->
+            </div>
+
+            <button class="btn-next" onclick="nextSection()">
+                يلا نشوف حاجات بحبها فيكي 💝
+            </button>
+        </div>
+    </section>
+
+    <!-- ===== 5. Love Cards ===== -->
+    <section id="love-cards" class="section">
+        <div class="cards-container">
+            <h2 class="section-title">حاجات بحبها في حموكشتي 💝</h2>
+            <p class="section-subtitle">دوسي على أي بطاقة وشوفي 😊</p>
+
+            <div class="cards-grid">
+                <!-- يتم بناء البطاقات تلقائياً من JavaScript -->
+            </div>
+
+            <button class="btn-next" onclick="nextSection()">
+                يلا نشوف المستقبل 🌟
+            </button>
+        </div>
+    </section>
+
+    <!-- ===== 6. Future Section ===== -->
+    <section id="future" class="section">
+        <div class="future-container">
+            <h2 class="section-title">لسه الحكاية مكملة 🌟</h2>
+            <p class="section-subtitle">أحلامنا للمستقبل</p>
+
+            <div class="future-text">
+                <!-- يمكنك تعديل هذا النص -->
+                نفسي حكايتنا تفضل مكملة وتكبر معانا كل يوم. نفسي نبني حاجة حلوة سوا، حاجة تستاهل كل الأيام اللي فاتت وكل الأيام الجاية.
+                <br><br>
+                نفسي نفضل نختار بعض كل يوم، ونفهم بعض أكتر، ونكبر مع بعض.
+                <br><br>
+                الحكاية لسه في أولها يا حموكشتي، وأجمل الفصول لسه ما اتكتبتش. ❤️
+            </div>
+
+            <button class="btn-next" onclick="goToLetter()">
+                عندي كلام ليكي ❤️
+            </button>
+        </div>
+    </section>
+
+    <!-- ===== 7. Love Letter ===== -->
+    <section id="love-letter" class="section">
+        <div class="letter-container">
+            <h2 class="letter-title">حموكشتي، عندي كلام كان نفسي أحكيهولك من زمان ❤️</h2>
+
+            <div id="letter-text" class="letter-text" data-full-text="يا حموكشتي،
+
+عارفة إيه أكتر حاجة بفكر فيها لما بفتكر حكايتنا؟
+
+إني من يوم 29 سبتمبر 2022، بدأت مع إنسانة بقت جزء كبير من حياتي، وإن السنين عدت وفيها ذكريات وضحك وكلام كتير، وأيام حلوة وأيام مكنتش سهلة علينا.
+
+بس لما ببص لكل ده، بحس إن فيه كلام كتير جوايا يمكن مقلتهوش بالطريقة اللي تليق بيكي.
+
+أنا مش هقولك إننا عمرنا ما زعلنا بعض، ولا إن كل حاجة بيننا كانت دايمًا سهلة.
+
+إحنا بشر، بنغلط، وبنزعل، وساعات ممكن منعرفش نوصل لبعض حتى وإحنا نفسنا نكون أقرب لبعض.
+
+بس وسط كل ده، فيه حاجة نفسي تعرفيها.
+
+إنتِ بالنسبالي مش مجرد بنت بحبها، إنتِ إنسانة أنا اتخيلت معاها حاجات كتير لسه محصلتش.
+
+اتخيلت أيام جاية نكون فيها أكبر وأنضج، ونبص لورا ونفتكر إحنا بدأنا إزاي، ونضحك على حاجات كانت مضايقانا وقتها، ونكون لسه مع بعض.
+
+اتخيلت إني في يوم أكون واقف جنبك وإحنا بنبدأ حياة جديدة، وأفتكر إن البنت اللي قدامي دي هي نفسها حموكشتي اللي عرفتها يوم 29/9/2022.
+
+ونفسي اليوم ده ييجي فعلًا.
+
+مش علشان عايز قصة حب مثالية، لكن علشان نفسي أعيش معاكي قصة حقيقية، فيها تفاهم واهتمام واحتواء، وفيها اتنين بيختاروا بعض كل يوم.
+
+أنا مش عايزك تكوني مبسوطة طول الوقت، ولا إنك تكوني قوية كل يوم.
+
+نفسي أكون شخص تقدري تتكلمي معاه من غير ما تضطري تشرحي كل حاجة، وأكون قريب منك بطريقة تريحك، وأحبك بطريقة تحسسك بالأمان.
+
+وأنا كمان عايز أتعلم إزاي أكون أحسن معاكي، وإزاي أسمعك وأفهمك، وإزاي نخلي علاقتنا مكان نرتاح فيه إحنا الاتنين.
+
+أنا مش عايزنا نفضل مع بعض لمجرد إننا بقالنا سنين، أنا عايزنا نفضل نختار بعض علشان لسه عندنا رغبة نبني حاجة حلوة سوا.
+
+عارفة يا حموكشتي؟
+
+أجمل حاجة ممكن تحصل مش إننا نفضل فاكرين أول يوم حبينا فيه بعض، لكن إننا بعد سنين طويلة نكون لسه بنحب بعض، ولسه بنحاول، ولسه بنلاقي أسباب تخلينا نبتسم لبعض.
+
+إنتِ بالنسبالي مش مجرد ذكرى حلوة في حياتي، إنتِ إنسانة نفسي أعيش معاها ذكريات جديدة.
+
+نفسي حكايتنا تكمل، وإن يبقى لينا مستقبل نفتخر بيه، وإن اليوم اللي بنفتكر فيه أول يوم لينا يبقى مجرد بداية لحكاية أطول وأجمل.
+
+ومهما كانت الأيام اللي جاية، نفسي نواجهها بصراحة، ونفهم بعض أكتر، ومنسيبش الزعل يتكلم مكاننا، ولا نخلي السكوت يبعدنا وإحنا ممكن نقرب بكلمتين صادقين.
+
+من بيتر لحموكشتي..
+
+من يوم 29/9/2022، ولسه عندي كلام كتير نفسي أعيشه معاكي، مش بس أقولهولك.
+
+بحبك يا حموكشتي، ونفسي أجمل أيامنا تكون لسه جاية. ❤️"></div>
+            <span class="letter-cursor"></span>
+
+            <button id="btn-skip-letter" class="btn-skip" onclick="skipTyping()" style="display: none;">
+                عرض الرسالة كاملة ⏩
+            </button>
+
+            <button class="btn-next" onclick="nextSection()">
+                لسه في مفاجأة ليكي 🎁
+            </button>
+        </div>
+    </section>
+
+    <!-- ===== 8. Surprises ===== -->
+    <section id="surprises" class="section">
+        <div class="surprise-container">
+            <h2 class="section-title">لسه في مفاجأة يا حموكشتي ❤️</h2>
+
+            <div class="surprise-box">
+                <p style="font-size: 1.2rem; color: var(--text-medium); margin-bottom: 20px;">
+                    مستعدة للمفاجأة؟ 🎁
+                </p>
+                <button class="btn-next" onclick="revealSurprise()" style="margin-top: 0;">
+                    افتحي المفاجأة 🎀
+                </button>
+            </div>
+
+            <!-- المفاجأة المخفية -->
+            <div class="surprise-hidden">
+                <div class="surprise-box" style="border: 2px solid var(--rose-light);">
+                    <p style="font-size: 1.3rem; color: var(--pink-dark); font-weight: 600; margin-bottom: 15px;">
+                        💕 رسالة خاصة من بيتر 💕
+                    </p>
+                    <p style="font-size: 1.1rem; color: var(--text-dark); line-height: 1.8;">
+                        يا حموكشتي، أنتِ أحلى حاجة حصلتلي في حياتي.
+                        <br>
+                        كل يوم بيعدي بحس إني محظوظ إنك في حياتي.
+                        <br>
+                        وعارفة إيه؟ لسه عندي كلام كتير مقلتهولكيش! 😊
+                    </p>
+                </div>
+            </div>
+
+            <!-- سؤال تفاعلي -->
+            <div class="question-box" style="margin-top: 30px;">
+                <p class="question-text">
+                    لو رجعنا لأول يوم في حكايتنا، كنتِ هتختاريني تاني؟ 🤔
+                </p>
+
+                <div class="choice-buttons">
+                    <button class="btn-choice" onclick="handleChoice(1)">
+                        طبعًا يا بيتر ❤️
+                    </button>
+                    <button class="btn-choice" onclick="handleChoice(2)">
+                        تعالى أقولك بنفسي 🥹
+                    </button>
+                </div>
+
+                <div id="choice-response" class="choice-response"></div>
+
+                <!-- المفاجأة النهائية -->
+                <div class="final-surprise">
+                    <img src="images/photo1.jpg" alt="بيتر وحموكشتي" class="final-surprise-image">
+                    <div class="final-surprise-text">
+                        <p style="font-size: 1.2rem; font-weight: 600; color: var(--pink-dark); margin-bottom: 10px;">
+                            من بيتر لحموكشتي 💕
+                        </p>
+                        <p style="font-size: 1rem; color: var(--text-dark); line-height: 1.8;">
+                            أنتِ مش مجرد حبيبتي، أنتِ شريكتي في كل حاجة.
+                            وأنا هفضل أختارك كل يوم.
+                            بحبك يا حموكشتي ❤️
+                        </p>
+                    </div>
+
+                    <button class="btn-next" onclick="nextSection()">
+                        النهاية 🌙
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 9. Cinematic Ending ===== -->
+    <section id="ending" class="section">
+        <div class="ending-hearts"></div>
+        <div class="ending-overlay"></div>
+
+        <div class="ending-content">
+            <!-- Slideshow -->
+            <div class="ending-slideshow">
+                <img src="images/photo1.jpg" alt="ذكرى 1">
+                <img src="images/photo2.jpg" alt="ذكرى 2">
+                <img src="images/photo3.jpg" alt="ذكرى 3">
+                <img src="images/photo4.jpg" alt="ذكرى 4">
+            </div>
+
+            <div class="ending-message">يا حموكشتي ❤️
+
+لو وصلتي لحد هنا، فعايزك تعرفي إن الموقع ده
+مش مجرد صور وكلام.
+
+ده جزء صغير من اللي جوايا ناحيتك،
+ومن الحاجات اللي نفسي أعيشها معاكي.
+
+حكايتنا بدأت يوم 29/9/2022،
+ونفسي نفضل نكتب فيها فصول جديدة.
+
+من بيتر لحموكشتي..
+بحبك، ونفسي أجمل أيامنا تكون لسه جاية.</div>
+
+            <div class="ending-signature">
+                ❤️ بيتر عيسى ❤️
+            </div>
+
+            <!-- Music Control -->
+            <div class="music-control">
+                <button class="btn-music" onclick="toggleMusic()">
+                    🎵 تشغيل الموسيقى
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Lightbox ===== -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img class="lightbox-content" src="" alt="صورة مكبرة">
+        <div class="lightbox-caption"></div>
+    </div>
+
+    <!-- ===== Background Music ===== -->
+    <audio id="bg-music" loop autoplay playsinline preload="auto">
+        <source src="music/song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- JavaScript -->
+    <script src="script.js?v=5"></script>
+
+</body>
+</html>
